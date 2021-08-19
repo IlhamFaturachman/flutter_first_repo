@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_first/NavDrawer.dart';
 
 class Category extends StatefulWidget {
   @override
@@ -8,5 +9,10 @@ class Category extends StatefulWidget {
 
 class _MoviesState extends State<Category> {
   @override
-  Widget build(BuildContext context) => Scaffold();
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color(0xff161616),
+        ),
+        drawer: NavigationDrawerWidget(),
+      );
 }
