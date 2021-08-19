@@ -6,20 +6,90 @@ class NavigationDrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: const Color(0xff3C3636),
+        color: const Color(0xff161616),
         child: ListView(
+          padding: EdgeInsets.zero,
           children: <Widget>[
-            const SizedBox(
-              height: 40,
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 20, 0, 30),
+              child: ListTile(
+                leading: Icon(
+                  Icons.cancel,
+                  size: 40.0,
+                  color: Colors.white,
+                ),
+                onTap: () {
+                  //bapak
+                },
+              ),
             ),
-            menuItem(
-                text: 'All Films',
-                icon: Icons.people,
-                onClicked: () => selectedItem(context, 0)),
-            menuItem(
-              text: 'Category',
-              icon: Icons.people,
-            )
+            Padding(
+              padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.movie,
+                  size: 30.0,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'All Movies',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => AllRecipes(),
+                  //   ),
+                  // );
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.category,
+                  size: 30.0,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'Category',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => FavRecipes(),
+                  //   ),
+                  // );
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.account_circle,
+                  size: 30.0,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'Account',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () {
+                  //Bapak
+                },
+              ),
+            ),
           ],
         ),
       ),

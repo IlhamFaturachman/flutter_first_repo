@@ -1,41 +1,68 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_first/NavDrawer.dart';
+import 'package:flutter_first/widgets/recmovies.dart';
 
 class First extends StatefulWidget {
+  const First({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() => _MyAppState();
+  _HomeState createState() => _HomeState();
 }
 
-class _MyAppState extends State<First> {
+class _HomeState extends State<First> {
   @override
-  Widget build(BuildContext context) => Scaffold(
-        drawer: NavigationDrawerWidget(),
-        body: Container(
-          width: MediaQuery.of(context).size.width * 1,
-          height: MediaQuery.of(context).size.height * 1,
-          decoration: BoxDecoration(color: const Color(0xaa100F0F)),
-          child: new Row(
-            children: [
-              new Container(
-                width: MediaQuery.of(context).size.width * 1,
-                height: MediaQuery.of(context).size.height * 0.65,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assets/images/cover.jpg"))),
-              ),
-              new Container(
-                width: MediaQuery.of(context).size.width * 1,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(
-                      MediaQuery.of(context).size.width * 0.2,
-                      MediaQuery.of(context).size.height * 0.1,
-                      MediaQuery.of(context).size.width * 0.2,
-                      0),
+  Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color(0xff161616),
+      ),
+      drawer: NavigationDrawerWidget(),
+      body: SingleChildScrollView(
+        child: Container(
+          color: const Color(0xff161616),
+          child: Column(
+            children: <Widget>[
+              Container(
+                child: GestureDetector(
+                  onTap: () {
+                    //bapak
+                  },
+                  child: Container(
+                    width: size.width * 1,
+                    height: size.height * 0.8,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/cover.jpg"),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
                 ),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 30, 0, 30),
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Text(
+                        "Recommended Movies",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              ItemCards()
             ],
           ),
         ),
-      );
+      ),
+    );
+  }
 }
