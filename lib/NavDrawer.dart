@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_first/moviespage.dart';
+import 'package:flutter_first/CategoryPage.dart';
+import 'package:flutter_first/moviesPage.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   @override
@@ -38,12 +39,12 @@ class NavigationDrawerWidget extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => AllRecipes(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Movies(),
+                    ),
+                  );
                 },
               ),
             ),
@@ -62,12 +63,12 @@ class NavigationDrawerWidget extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => FavRecipes(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Category(),
+                    ),
+                  );
                 },
               ),
             ),
