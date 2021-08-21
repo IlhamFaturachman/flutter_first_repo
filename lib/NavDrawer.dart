@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first/CategoryPage.dart';
+import 'package:flutter_first/homeScreen.dart';
 import 'package:flutter_first/moviesPage.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -21,6 +22,30 @@ class NavigationDrawerWidget extends StatelessWidget {
                 ),
                 onTap: () {
                   //bapak
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.home,
+                  size: 30.0,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'Home',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => First(),
+                    ),
+                  );
                 },
               ),
             ),
