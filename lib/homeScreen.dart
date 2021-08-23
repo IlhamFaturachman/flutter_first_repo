@@ -58,7 +58,7 @@ class _HomeState extends State<First> {
                   ),
                 ),
               ),
-              ItemCards()
+              ItemCards(),
             ],
           ),
         ),
