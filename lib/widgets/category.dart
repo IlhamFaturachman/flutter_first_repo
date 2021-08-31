@@ -88,7 +88,7 @@ class _CategoriessState extends State<Categoriess> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         image: DecorationImage(
-                          image: AssetImage("assets/images/maze.jpg"),
+                          image: AssetImage("assets/images/ymFvOIUmZr.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -100,7 +100,7 @@ class _CategoriessState extends State<Categoriess> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
-                        image: AssetImage("assets/images/up.jpg"),
+                        image: AssetImage("assets/images/download (1).jpg"),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -117,7 +117,8 @@ class _CategoriessState extends State<Categoriess> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         image: DecorationImage(
-                          image: AssetImage("assets/images/cover.jpg"),
+                          image: AssetImage(
+                              "assets/images/300px-David_Wilkie_Chelsea_Pensioners_Reading_the_Waterloo_Dispatch.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -129,7 +130,7 @@ class _CategoriessState extends State<Categoriess> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
-                        image: AssetImage("assets/images/heri.jpg"),
+                        image: AssetImage("assets/images/Adventure-Genre.jpg"),
                         fit: BoxFit.cover,
                       ),
                     ),
