@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first/detail.dart';
 
 class MovieCard extends StatelessWidget {
   const MovieCard({
@@ -11,12 +12,12 @@ class MovieCard extends StatelessWidget {
     return Container(
       child: Card(
         child: GestureDetector(
-          // onTap: () => Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => Detail(),
-          //   ),
-          // ),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Detail(),
+            ),
+          ),
           child: Container(
             color: const Color(0xff161616),
             child: Column(
@@ -75,7 +76,7 @@ class MovieCard extends StatelessWidget {
                                   height: size.height * 0.4,
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
-                                    image: AssetImage("assets/images/heri.jpg"),
+                                    image: AssetImage("assets/images/maze.jpg"),
                                     fit: BoxFit.cover,
                                   )),
                                 ),
@@ -120,7 +121,7 @@ class MovieCard extends StatelessWidget {
                                   height: size.height * 0.4,
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
-                                    image: AssetImage("assets/images/heri.jpg"),
+                                    image: AssetImage("assets/images/up.jpg"),
                                     fit: BoxFit.cover,
                                   )),
                                 ),
@@ -158,7 +159,8 @@ class MovieCard extends StatelessWidget {
                                   height: size.height * 0.4,
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
-                                    image: AssetImage("assets/images/heri.jpg"),
+                                    image:
+                                        AssetImage("assets/images/cover.jpg"),
                                     fit: BoxFit.cover,
                                   )),
                                 ),
